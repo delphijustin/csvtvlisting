@@ -1,0 +1,1 @@
+{ "rowsPath": "//channel", "columns": [ { "header": "id", "valuePath": "@id" }, { "header": "display-name", "valuePath": "/display-name" }, { "header": "url", "valuePath": "/url" } ] }

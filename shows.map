@@ -1,0 +1,1 @@
+{ "rowsPath": "//programme", "columns": [ { "header": "start", "valuePath": "@start" }, { "header": "stop", "valuePath": "@stop" }, { "header": "channel-id", "valuePath": "@channel" }, { "header": "title", "valuePath": "/title" }, { "header": "subtitle", "valuePath": "/sub-title" }, { "header": "description", "valuePath": "/desc" } ] }

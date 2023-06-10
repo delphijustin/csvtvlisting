@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>XMLTV Time Converter</title>
+<meta name="description" content="XMLTV Time Converter">
+<meta name="author" content="Justin Roeder">
+<meta name="keywords" content="Time Calculator,XMLTV Time,XMLTV,XMLTVListing,Time Converter">
+<script>
+function DecodeTime(form){
+form.t.value=new Date(form.xmlt.value.substring(0,4)+'-'+form.xmlt.value.substring(4,6)+'-'+form.xmlt.value.substring(6,8)+'T'+form.xmlt.value.substring(8,10)+':'+form.xmlt.value.substring(10,12)+':'+form.xmlt.value.substring(12,14)+'+00:00').toLocaleString();
+}
+function twoDigits(x){
+if(x<10)return "0"+x.toString();
+return x.toString();
+}
+function EncodeTime(form){
+var lt=new Date(form.t.value);
+form.xmlt.value=twoDigits(lt.getUTCFullYear())+twoDigits(lt.getUTCMonth()+1)+twoDigits(lt.getUTCDate())+twoDigits(lt.getUTCHours())+twoDigits(lt.getUTCMinutes())+"00";
+}
+</script>
+</head>
+<body>
+<form action="javascript:;">
+XML Time:<input type="text" name="xmlt" maxlength="14"> +0000
+<input type="button" value="Convert To Local Time" onclick="DecodeTime(this.form)"><br>
+Local time:<input type="text" name="t">
+<input type="button" value="Convert To XML Time" onclick="EncodeTime(this.form)"><br>
+</form>
+</body>
+</html>
