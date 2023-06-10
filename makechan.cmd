@@ -9,7 +9,7 @@ if "%1"=="" goto configure
 :makecsv
 echo Creating CSV File...
 xml2csv.exe -i %churl% -m channels.map -o channels.%csvid%.csv
-if exist channels.%csvid%.csv goto create
+if exist channels.%csvid%.csv goto created
 echo Failed.
 exit /b 1
 :created
