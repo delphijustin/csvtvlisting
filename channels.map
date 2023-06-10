@@ -1,1 +1,1 @@
-{ "rowsPath": "//channel", "columns": [ { "header": "id", "valuePath": "@id" }, { "header": "display-name", "valuePath": "/display-name" }, { "header": "url", "valuePath": "/url" } ] }
+{ "rowsPath": "//channel", "columns": [ { "header": "id", "valuePath": "@id" },{"header":"channelNum", "valuePath":"/display-name[3]"},{ "header": "display-name", "valuePath": "/display-name" }, { "header": "url", "valuePath": "/url" } ] }
