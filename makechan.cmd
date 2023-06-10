@@ -9,8 +9,12 @@ if "%1"=="" goto configure
 :makecsv
 echo Creating CSV File...
 xml2csv.exe -i %churl% -m channels.map -o channels.%csvid%.csv
-if exist channels.%csvid%.csv exit /b %csvid%
+if exist channels.%csvid%.csv goto create
 echo Failed.
+exit /b 1
+:created
+move /Y channels.%csvid%.csv channels.csv
+echo Done.
 exit /b 0
 :help
 echo Usage: %0 [xmlfilename] [apikey] [lineupid]
